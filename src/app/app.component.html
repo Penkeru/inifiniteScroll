@@ -1,0 +1,8 @@
+<div class="results-container" #content infinite-scroll [infiniteScrollContainer]="content"
+      (scrolled)="onScrollDown()">
+  <ul>
+    <li [ngStyle]="{'height': itemSize + 'px'}" *ngFor="let item of results">
+      {{item.value}}
+    </li>
+  </ul>
+</div>
